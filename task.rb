@@ -154,6 +154,9 @@ def q15
 
   # 以下に回答を記載
 
+  puts data1.key?(:age)? "OK" : "NG"
+  puts data2.key?(:age)? "OK" : "NG"
+
 end
 
 def q16
@@ -165,6 +168,10 @@ def q16
   ]
 
   # 以下に回答を記載
+
+  users.each do |name:, age:|
+    puts "私の名前は#{name}です。年齢は#{age}歳です。"
+  end
 
 end
 

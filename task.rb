@@ -170,7 +170,7 @@ def q16
   # 以下に回答を記載
 
   users.each do |user|
-    puts "私の名前は#{user [:name]} です。年齢は#{user [:age]}歳です。"
+    puts "私の名前は#{user[:name]} です。年齢は#{user[:age]}歳です。"
   end
   
 
@@ -178,6 +178,20 @@ end
 
 class UserQ17
   # 以下に回答を記載
+
+  def initialize(params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
+  end
+
+  def info 
+    puts <<~TEXT
+     名前：#{@name}
+     年齢：#{@age}
+     性別：#{@gender}
+    TEXT
+  end
 
 end
 
@@ -193,6 +207,19 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  
+  def initialize(params)
+    @name = params[:name]
+    @age = params[:age]
+  end
+
+  def introduce
+    if @age >= 20
+      return "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+     else
+      return "はいさいまいど〜，#{@name}です！！！"
+    end
+  end
 
 end
 
